@@ -3,4 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/tradlick/public_html/
     - cp -r ./ $DEPLOYPATH
-    # - cp style.css $DEPLOYPATH
+    - cd $DEPLOYPATH && composer install && composer update && npm install && npm update
