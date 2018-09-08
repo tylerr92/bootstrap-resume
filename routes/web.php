@@ -4,13 +4,25 @@
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*
+| Index route
+| Returns resume page
+*/
+Route::get('/', 'HomeController@index')->name('home.index');
+
+/**
+ * Resume Resource Routes
+ * |--------------------------------------------------------------|
+ * | Verb      | URI                   | Action  | Route Name     |
+ * | GET       | /resume               | index   | resume.index   |
+ * | GET       | /resume/create        | create  | resume.create  |
+ * | POST      | /resume               | store   | resume.store   |
+ * | GET       | /resume/{resume}      | show    | resume.show    |
+ * | GET       | /resume/{resume}/edit | edit    | resume.edit    |
+ * | PUT/PATCH | /resume/{resume}      | update  | resume.update  |
+ * | DELETE    | /resume/{resume}      | destroy | resume.destroy |
+ * |--------------------------------------------------------------|
+ */
+Route::resource('/resume', 'ResumeController');
