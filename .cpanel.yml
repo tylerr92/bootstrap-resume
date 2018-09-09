@@ -3,5 +3,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/tradlick/public_html
     - rm -rf $DEPLOYPATH/* && rm -rf $DEPLOYPATH/framework/* && cp -r ./ $DEPLOYPATH/framework && cp -r $DEPLOYPATH/framework/public/* $DEPLOYPATH/
-    - cd $DEPLOYPATH && cat index.php | xclip -i && echo "ini_set('eaccelerator.enable', 0);" > index.php && xclip -o >> index.php && composer install #
+    - cd $DEPLOYPATH && composer install #
     # && composer update && npm install && npm update && npm run prod
