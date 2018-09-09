@@ -1,0 +1,59 @@
+// Fonts
+@import url("https://use.typekit.net/tao6pjj.css");
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+/* Show it is fixed to the top */
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+}
+
+/*
+* Custom CSS and SCSS
+*/
+.glass {
+  position: fixed;
+  top:0;
+  width: 100%;
+  min-height: 85px;
+  // margin-bottom: 20px;
+  background: rgba(0,0,0,0.7);
+  -webkit-filter: blur(60px);
+  -moz-filter: blur(60px);
+  -o-filter: blur(60px);
+  -ms-filter: blur(60px);
+  filter: blur(60px);
+}
+
+.navbar {
+  opacity: 0.95;
+  background-color: #606c88; // Old browsers
+  background: #606c88; /* Old browsers */
+  background: -moz-linear-gradient(left, #606c88 0%, #3f4c6b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #606c88 0%,#3f4c6b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #606c88 0%,#3f4c6b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 ); /* IE6-9 */
+}
+
+/*
+* Footer
+*/
+.resume-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.resume-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.header-texts {
+  letter-spacing: 5px;
+}

@@ -20,12 +20,13 @@ mix.setPublicPath('public');
 mix.webpackConfig({
   resolve: {
     modules: [
-      path.resolve(__dirname, 'node_modules/bootstrap'),
+      path.resolve(__dirname, 'node_modules/bootstrap/dist'),
       path.resolve(__dirname, 'node_modules/jquery/dist'),
       path.resolve(__dirname, 'node_modules/vue/dist'),
       path.resolve(__dirname, 'node_modules/axios/dist'),
       path.resolve(__dirname, 'node_modules/lodash'),
-      path.resolve(__dirname, 'node_modules/sweetalert2/dist')
+      path.resolve(__dirname, 'node_modules/sweetalert2/dist'),
+      path.resolve(__dirname, 'node_modules/popper.js/dist')
     ]
   }
 });
@@ -41,7 +42,8 @@ mix.extract([
   'axios',
   'sweetalert2',
   'lodash',
-  'bootstrap'
+  'js/bootstrap',
+  'popper.js'
 ]);
 
 /*
@@ -61,12 +63,21 @@ mix.autoload({
 | app.scss | Applciation SCSS file
 */
 mix
-.js(['resources/js/app.js'], 'public/js')
-.sass('resources/sass/app.scss', 'public/css');
+.js(['resources/assets/js/app.js'], 'public/js')
+.sass('resources/assets/sass/app.scss', 'public/css');
 
 /*
 |--------------------------------------------------------------------------
 | Copy Static Assets
 |--------------------------------------------------------------------------
 */
-// mix.copyDirectory('resources/assets/images', 'public/images');
+mix.copyDirectory('resources/assets/images', 'public/images');
+
+/*
+|--------------------------------------------------------------------------
+| Mix In Production
+|--------------------------------------------------------------------------
+*/
+if (mix.inProduction() || process.env.npm_lifecycle_event !== 'hot') {
+    mix.version();
+}
