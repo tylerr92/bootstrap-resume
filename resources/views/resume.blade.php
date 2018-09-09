@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', config('app.app_name') . ' | Resume')
+@section('title', config('app.app_name') . 'Tyler Radlick | Resume')
 
 @section('content')
 <div class="row">
@@ -84,7 +84,7 @@
 
           <div class="card mt-3 text-center">
             <div class="card-body">
-              <button type="button" class="btn btn-secondary"><i class="fas fa-file-download fa-lg"></i> &nbsp; Download Resume</button>
+              <a class="btn btn-secondary" href="/files/" download="TylerRadlickResume.pdf" role="button"><i class="fas fa-file-download fa-lg"></i> &nbsp; Download Resume</a>
             </div>
           </div>
         </div>

@@ -73,6 +73,8 @@ mix
 */
 mix.copyDirectory('resources/assets/images', 'public/images');
 
+mix.copy('resources/assets/files/resume.pdf', 'public/files/TylerRadlickResume.pdf');
+
 /*
 |--------------------------------------------------------------------------
 | Mix In Production
