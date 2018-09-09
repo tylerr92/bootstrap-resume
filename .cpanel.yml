@@ -3,4 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/tradlick/public_html/
     - rm -rf $DEPLOYPATH && cp -r ./ $DEPLOYPATH
-    - cd $DEPLOYPATH && composer install && composer update && npm install && npm update && npm run prod && echo "Deployment Success"
+    - cd $DEPLOYPATH && composer install && composer update && npm install && npm update && npm run prod
