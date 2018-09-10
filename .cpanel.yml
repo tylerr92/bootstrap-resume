@@ -5,4 +5,4 @@ deployment:
     - rm -rf $DEPLOYPATH/* && rm -rf $DEPLOYPATH/framework/* && /bin/cp -r ./ $DEPLOYPATH/framework && /bin/cp -r $DEPLOYPATH/framework/public/* $DEPLOYPATH/
     - cd $DEPLOYPATH/framework/ && composer install
     # && composer update && npm install && npm update && npm run prod
-    # rm -rf $DEPLOYPATH/* && rm -rf $DEPLOYPATH/framework/* && de
+    # rm -rf $DEPLOYPATH/* && rm -rf $DEPLOYPATH/framework/* &&
