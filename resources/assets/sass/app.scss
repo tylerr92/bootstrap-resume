@@ -10,12 +10,50 @@
 /* Show it is fixed to the top */
 body {
   min-height: 75rem;
+  min-width: 800px;
   padding-top: 4.5rem;
 }
 
 /*
 * Custom CSS and SCSS
 */
+
+// Small screen
+// Used for small screen or phone
+@media (min-width: 576px) {
+  /* change this, by default 540px */
+   .container {
+     max-width: 530px;
+  }
+}
+
+// Medium screen
+// Used for medium screen or tablet
+@media (min-width: 800px) {
+  /* change this, by default 720px */
+  .container {
+  max-width: 799px;
+  }
+}
+
+// Large screen
+// Used for large screen, Laptop or Desktop
+@media (min-width: 992px) {
+  /* change this, by default 960px */
+  .container {
+    max-width: 990px;
+  }
+}
+
+// Extra large screen
+// Used for extra large screen or desktop
+@media (min-width: 1200px) {
+  /* change this, by default 1140px */
+  .container {
+    max-width: 1140px;
+  }
+}
+
 .glass {
   position: fixed;
   top:0;

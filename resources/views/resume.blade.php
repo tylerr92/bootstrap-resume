@@ -5,14 +5,14 @@
 @section('content')
 <div class="row">
 
-  <div class="col-12 mt-5">
+  <div class="col-md-12 col-lg-12 col-xl-12 mt-5">
     <div class="row">
-      <div class="col-4">
+      <div class="col-md-4 col-lg-4 col-xl-4">
         <div class="card">
           <img class="card-img-top" src="/images/15384.jpg" alt="Card image cap">
           <div class="card-body">
             <div class="row">
-              <div class="col-2">
+              <div class="d-md-none d-lg-block col-lg-2 col-xl-2">
                 <br />
                 <i class="fas fa-map-marker-alt fa-2x"></i>
                 <br />
@@ -29,7 +29,7 @@
                 <i class="fas fa-globe fa-2x"></i>
               </div>
 
-              <div class="col-10">
+              <div class="col-md-12 col-lg-10 col-xl-10">
                 <p class="card-text">
                   8601 Anderson Mill Rd.
                   <br />
@@ -83,16 +83,20 @@
           </div>
 
           <div class="card mt-3 text-center">
-            <div class="card-body">
-              <a class="btn btn-secondary" href="/files/" download="TylerRadlickResume.pdf" role="button"><i class="fas fa-file-download fa-lg"></i> &nbsp; Download Resume</a>
+            <div class="card-body mx-0 px-0">
+              <div class="row m-0 p-0">
+                <div class="col-md-12 col-lg-12 col-xl-12">
+                  <a class="btn btn-secondary btn-sm" href="/files/" download="TylerRadlickResume.pdf" role="button"><i class="fas fa-file-download fa-lg"></i> &nbsp; Download Resume</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-8">
+        <div class="col-md-8 col-lg-8 col-xl-8">
           <div class="row">
 
-            <div class="col-12">
+            <div class="col-md-12 col-lg-12 col-xl-12">
               <div class="card">
                 <div class="card-body">
                   <hr />
@@ -146,14 +150,14 @@
 
           <div class="row mt-3">
 
-            <div class="col-12">
+            <div class="col-md-12 col-lg-12 col-xl-12">
               <div class="card">
                 <div class="card-body">
                   <h2 class="header-texts">REFERENCES</h2>
 
                   <div class="row mt-3">
 
-                    <div class="col-6">
+                    <div class="col-md-6 col-lg-6 col-xl-6">
 
                       <div class="card">
                         <div class="card-body">
@@ -167,7 +171,7 @@
 
                       </div>
 
-                      <div class="col-6">
+                      <div class="col-md-6 col-lg-6 col-xl-6">
 
                         <div class="card">
                           <div class="card-body">
