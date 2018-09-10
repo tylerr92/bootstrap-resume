@@ -3,6 +3,6 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/tradlick/public_html
     - /bin/cp -r ./ $DEPLOYPATH/framework && /bin/cp -r $DEPLOYPATH/framework/public/* $DEPLOYPATH/
-    - cd $DEPLOYPATH/framework/ && composer install #
+    - rm -rf $DEPLOYPATH/* && rm -rf $DEPLOYPATH/framework/* && cd $DEPLOYPATH/framework/ && composer install #
     # && composer update && npm install && npm update && npm run prod
-    # rm -rf $DEPLOYPATH/* && rm -rf $DEPLOYPATH/framework/* && 
+    # rm -rf $DEPLOYPATH/* && rm -rf $DEPLOYPATH/framework/* &&
