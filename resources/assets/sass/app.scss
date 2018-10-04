@@ -70,12 +70,11 @@ body {
 
 .navbar {
   opacity: 0.95;
-  background-color: #606c88; // Old browsers
-  background: #606c88; /* Old browsers */
-  background: -moz-linear-gradient(left, #606c88 0%, #3f4c6b 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #606c88 0%,#3f4c6b 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #606c88 0%,#3f4c6b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 ); /* IE6-9 */
+  background: #45484d; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #45484d 0%, #000000 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 /*
