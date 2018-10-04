@@ -25,7 +25,8 @@ mix.webpackConfig({
       path.resolve(__dirname, 'node_modules/axios/dist'),
       path.resolve(__dirname, 'node_modules/lodash'),
       path.resolve(__dirname, 'node_modules/sweetalert2/dist'),
-      path.resolve(__dirname, 'node_modules/popper.js/dist')
+      path.resolve(__dirname, 'node_modules/popper.js/dist'),
+      path.resolve(__dirname, 'node_modules/tempusdominus-bootstrap-4/build/js')
     ]
   }
 });
@@ -41,7 +42,8 @@ mix.extract([
   'sweetalert2',
   'lodash',
   'js/bootstrap',
-  'popper.js'
+  'popper.js',
+  'tempusdominus-bootstrap-4'
 ]);
 
 /*
@@ -72,6 +74,8 @@ mix
 mix.copyDirectory('resources/assets/images', 'public/images');
 
 mix.copy('resources/assets/files/resume.pdf', 'public/files/TylerRadlickResume.pdf');
+
+mix.copy('node_modules/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css', 'public/css');
 
 /*
 |--------------------------------------------------------------------------

@@ -7,7 +7,7 @@
     <div class="row mx-auto">
       <div class="col-12 text-light text-center">
         <h1 class="header-texts">Tyler J. Radlick</h1>
-        <h3>Software Engineer</h3>
+        <h3>Software & Support Engineer</h3>
       </div>
     </div>
   </div>
