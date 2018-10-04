@@ -22,9 +22,6 @@ mix.webpackConfig({
     modules: [
       path.resolve(__dirname, 'node_modules/bootstrap/dist'),
       path.resolve(__dirname, 'node_modules/jquery/dist'),
-      path.resolve(__dirname, 'node_modules/vue/dist'),
-      path.resolve(__dirname, 'node_modules/vue-loader/lib'),
-      path.resolve(__dirname, 'node_modules/vue-router/dist'),
       path.resolve(__dirname, 'node_modules/axios/dist'),
       path.resolve(__dirname, 'node_modules/lodash'),
       path.resolve(__dirname, 'node_modules/sweetalert2/dist'),
@@ -39,9 +36,6 @@ mix.webpackConfig({
 |--------------------------------------------------------------------------
 */
 mix.extract([
-  'vue',
-  'vue-loader',
-  'vue-router',
   'jquery',
   'axios',
   'sweetalert2',
