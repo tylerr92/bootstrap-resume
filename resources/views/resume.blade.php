@@ -17,7 +17,7 @@
           <!--Table body-->
           <tbody>
             <tr>
-              <td class="align-middle">
+              <td class="align-middle d-md-none d-lg-block">
                 <i class="fas fa-map-marker-alt fa-2x align-middle"></i>
               </td>
               <td class="align-middle">
@@ -32,7 +32,7 @@
             </tr>
 
             <tr>
-              <td class="align-middle">
+              <td class="align-middle d-md-none d-lg-block">
                 <i class="fas fa-phone fa-2x"></i>
               </td>
               <td class="align-middle">
@@ -43,7 +43,7 @@
             </tr>
 
             <tr>
-              <td class="align-middle">
+              <td class="align-middle d-md-none d-lg-block">
                 <i class="fas fa-envelope fa-2x"></i>
               </td>
               <td class="align-middle">
@@ -54,7 +54,7 @@
             </tr>
 
             <tr>
-              <td class="align-middle">
+              <td class="align-middle d-md-none d-lg-block">
                 <i class="fab fa-linkedin-in fa-2x"></i>
               </td>
               <td class="align-middle">
@@ -65,7 +65,7 @@
             </tr>
 
             <tr>
-              <td class="align-middle">
+              <td class="align-middle d-md-none d-lg-block">
                 <i class="fas fa-globe fa-2x"></i>
               </td>
               <td class="align-middle">
@@ -230,6 +230,7 @@
 
 </div>
 
+<!-- Buttons Row -->
 <div class="row">
   <!-- View Project On Github -->
   <div class="col-4">
@@ -237,7 +238,10 @@
       <div class="card-body mx-0 px-0">
         <div class="row m-0 p-0">
           <div class="col-md-12 col-lg-12 col-xl-12">
-            <a class="btn btn-secondary" href="https://github.com/tylerr92/bootstrap-resume" target="blank" role="button"><i class="fab fa-github fa-lg"></i> &nbsp; View Project On Github</a>
+            <!-- Large Screen Buttons -->
+            <a class="btn btn-secondary btn-block d-none d-lg-block d-xl-block" href="https://github.com/tylerr92/bootstrap-resume" target="blank" role="button"><i class="fab fa-github fa-lg"></i> &nbsp; View Project On Github</a>
+            <!-- Small Screen Buttons -->
+            <a class="btn btn-secondary btn-block btn-sm d-block d-md-block d-lg-none" href="https://github.com/tylerr92/bootstrap-resume" target="blank" role="button"><i class="fab fa-github"></i> &nbsp; View Project On Github</a>
           </div>
         </div>
       </div>
@@ -250,7 +254,10 @@
       <div class="card-body mx-0 px-0">
         <div class="row m-0 p-0">
           <div class="col-md-12 col-lg-12 col-xl-12">
-            <a class="btn btn-secondary" href="/files/TylerRadlickResume.pdf" download="TylerRadlickResume.pdf" role="button"><i class="fas fa-file-download fa-lg"></i> &nbsp; Download A Copy To Keep</a>
+            <!-- Large Screen Buttons -->
+            <a class="btn btn-secondary btn-block d-none d-lg-block d-xl-block" href="/files/TylerRadlickResume.pdf" download="TylerRadlickResume.pdf" role="button"><i class="fas fa-file-download fa-lg"></i> &nbsp; Download PDF Version</a>
+            <!-- Small Screen Buttons -->
+            <a class="btn btn-secondary btn-block btn-sm d-block d-md-block d-lg-none" href="/files/TylerRadlickResume.pdf" download="TylerRadlickResume.pdf" role="button"><i class="fas fa-file-download"></i> &nbsp; Download PDF Version</a>
           </div>
         </div>
       </div>
@@ -263,7 +270,10 @@
       <div class="card-body mx-0 px-0">
         <div class="row m-0 p-0">
           <div class="col-md-12 col-lg-12 col-xl-12">
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#contactModal"><i class="fas fa-mobile fa-lg"></i> &nbsp; Interested? Get In Touch.</button>
+            <!-- Large Screen Buttons -->
+            <button type="button" class="btn btn-secondary btn-block d-none d-lg-block d-xl-block" data-toggle="modal" data-target="#contactModal"><i class="fas fa-mobile fa-lg"></i> &nbsp; Interested? Get In Touch.</button>
+            <!-- Small Screen Buttons -->
+            <button type="button" class="btn btn-secondary btn-block btn-sm d-block d-md-block d-lg-none" data-toggle="modal" data-target="#contactModal"><i class="fas fa-mobile"></i> &nbsp; Interested? Get In Touch.</button>
           </div>
         </div>
       </div>
