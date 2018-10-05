@@ -250,7 +250,7 @@
       <div class="card-body mx-0 px-0">
         <div class="row m-0 p-0">
           <div class="col-md-12 col-lg-12 col-xl-12">
-            <a class="btn btn-secondary" href="/files/" download="TylerRadlickResume.pdf" role="button"><i class="fas fa-file-download fa-lg"></i> &nbsp; Download A Copy To Keep</a>
+            <a class="btn btn-secondary" href="/files/TylerRadlickResume.pdf" download="TylerRadlickResume.pdf" role="button"><i class="fas fa-file-download fa-lg"></i> &nbsp; Download A Copy To Keep</a>
           </div>
         </div>
       </div>
