@@ -9,7 +9,7 @@
   <div class="col-md-4 col-lg-4 col-xl-4">
 
     <div class="card">
-      <img class="card-img-top" src="/images/tradlick_business.jpg" alt="Card image cap"/>
+      <img class="card-img-top" src="/images/tradlick_casual.jpg" alt="Card image cap"/>
       <div class="card-body">
 
         <!--Table-->
