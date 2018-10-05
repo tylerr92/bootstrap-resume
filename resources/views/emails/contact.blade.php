@@ -14,9 +14,9 @@
         <p class="card-text">
           Hello {{ $contact->contactName }},<br>
           <br>
-          Thank you for checking out my resume website. I hope you enjoyed it as much as I enjoyed making it. Based on what you let me know, you want to chat about an oppratunity with {{ $contact->companyName }} on {{ Carbon\Carbon::parse($contact->dateTimePicker)->format('m/d/Y') }} at {{ Carbon\Carbon::parse($contact->dateTimePicker)->format('h:m A') }}. I will follow up via email to {{ $contact->emailAddress }} by {{ Carbon\Carbon::parse($contact->dateTimePicker)->format('m/d/Y') }} to confirm the details. Otherwise I am expecting to give you a call at {{ $contact->phoneNumber }}. You indicated that we would be discussing, <br><br>
+          Thank you for checking out my resume website. I hope you enjoyed it as much as I enjoyed making it. Based on what you let me know, you want to chat about an opportunity with {{ $contact->companyName }} on {{ Carbon\Carbon::parse($contact->dateTimePicker)->format('m/d/Y') }} at {{ Carbon\Carbon::parse($contact->dateTimePicker)->format('h:m A') }}. I will follow up via email to {{ $contact->emailAddress }} by {{ Carbon\Carbon::parse($contact->dateTimePicker)->format('m/d/Y') }} to confirm the details. Otherwise I will give you a call at {{ $contact->phoneNumber }} to discuss, <br><br>
           {{ $contact->message }}<br><br>
-          If any of that changes, just let me know by replying to this email or sending me a new email to tylerradlick@gmail.com. I look forward to discussing our next big project togeather soon.<br>
+          If any of that changes, just let me know by replying to this email or sending me a new email to tylerradlick@gmail.com. I look forward to discussing our next big project together soon.<br>
           <br>
           Regards,<br>
           <br>
