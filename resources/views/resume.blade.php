@@ -271,9 +271,9 @@
         <div class="row m-0 p-0">
           <div class="col-md-12 col-lg-12 col-xl-12">
             <!-- Large Screen Buttons -->
-            <button type="button" class="btn btn-secondary btn-block d-none d-lg-block d-xl-block" data-toggle="modal" data-target="#contactModal"><i class="fas fa-mobile fa-lg"></i> &nbsp; Interested? Get In Touch.</button>
+            <button type="button" class="btn btn-secondary btn-block d-none d-lg-block d-xl-block" data-toggle="modal" data-target="#contactModal"><i class="fas fa-mobile fa-lg"></i> &nbsp; Interested? Get In Touch</button>
             <!-- Small Screen Buttons -->
-            <button type="button" class="btn btn-secondary btn-block btn-sm d-block d-md-block d-lg-none" data-toggle="modal" data-target="#contactModal"><i class="fas fa-mobile"></i> &nbsp; Interested? Get In Touch.</button>
+            <button type="button" class="btn btn-secondary btn-block btn-sm d-block d-md-block d-lg-none" data-toggle="modal" data-target="#contactModal"><i class="fas fa-mobile"></i> &nbsp; Interested? Get In Touch</button>
           </div>
         </div>
       </div>
