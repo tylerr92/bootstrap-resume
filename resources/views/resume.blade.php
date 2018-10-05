@@ -33,7 +33,7 @@
 
             <tr>
               <td class="align-middle d-md-none d-lg-block">
-                <i class="fas fa-phone fa-2x"></i>
+                <i class="fas fa-mobile fa-2x"></i>
               </td>
               <td class="align-middle">
                 <p class="card-text">
@@ -183,7 +183,7 @@
               <li>Managing a CentOS LAMP Stack with cPanel and WHM</li>
               <li>Configuration of PHP-FPM, DNS, Exim, Postfix, and FTP servers</li>
               <li>Designing Wordpress Themes and Plugins</li>
-              <li>Correcting Security flaws in customer installations</li>
+              <li>Correcting security flaws in customer installations</li>
               <li>ESXi Virtualization and Hardware tuning</li>
             </ul>
 
@@ -287,48 +287,47 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="contactModalLabel">What Should We Talk About</h5>
+        <h5 class="modal-title" id="contactModalLabel">Let's Meet! Get in touch today.</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form method="post" action="{{ route('home.sendMail') }}">
+          @csrf
           <div class="form-group">
             <label for="contactNameLabel">Your Name</label>
-            <input type="text" class="form-control" id="contactname" aria-describedby="contactNameLabel" placeholder="First & Last Name">
+            <input type="text" class="form-control" id="contactName" name="contactName" aria-describedby="contactNameLabel" placeholder="First & Last Name">
           </div>
 
           <div class="form-group">
             <label for="companyNameLabel">Your Companys Name</label>
-            <input type="text" class="form-control" id="companyName" aria-describedby="companyNameLabel" placeholder="Company Name">
+            <input type="text" class="form-control" id="companyName" name="companyName" aria-describedby="companyNameLabel" placeholder="Company Name">
           </div>
 
           <div class="form-group">
             <label for="phoneNumberLabel">Phone Number</label>
-            <input type="text" class="form-control" id="phoneNumber" aria-describedby="phoneNumberLabel" placeholder="(800) 555-5555">
+            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" aria-describedby="phoneNumberLabel" placeholder="(800) 555-5555">
           </div>
 
           <div class="form-group">
             <label for="emailAddressLabel">Your Email Address</label>
-            <input type="email" class="form-control" id="emailAddress" aria-describedby="emailAddressLabel" placeholder="you@thenextbigthing.com">
+            <input type="email" class="form-control" id="emailAddress" name="emailAddress" aria-describedby="emailAddressLabel" placeholder="you@thenextbigthing.com">
           </div>
 
           <div class="form-group">
             <label for="messageLabel">What should we discuss?</label>
-            <textarea class="form-control" id="message" rows="6"></textarea>
+            <textarea class="form-control" id="message" name="message" rows="6"></textarea>
           </div>
 
-          <div style="overflow:hidden;">
-            <div class="form-group">
-              <label for="Date and Time">When Is A Good Time To Chat?</label>
-              <div id="datetimepicker"></div>
-            </div>
+          <div class="form-group">
+            <label for="Date and Time">When should we chat?</label>
+            <input type="text" class="form-control datetimepicker-input" id="dateTimePicker" name="dateTimePicker" data-toggle="datetimepicker" data-target="#dateTimePicker"/>
           </div>
 
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary">Send</button>
+            <button type="submit" class="btn btn-primary">Send</button>
           </div>
         </div>
       </div>
@@ -347,10 +346,11 @@
     <!-- Datetime Picker -->
     <script type="text/javascript">
     $(function () {
-      $('#datetimepicker').datetimepicker({
-        inline: true,
-        sideBySide: true
-      });
+      $('#dateTimePicker').datetimepicker(
+        {
+          sideBySide: true
+        }
+      );
     });
     </script>
     @endpush
