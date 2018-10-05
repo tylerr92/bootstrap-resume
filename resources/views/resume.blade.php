@@ -144,7 +144,7 @@
       <div class="col-md-12 col-lg-12 col-xl-12">
 
         <!-- PROFESSIONAL PROFILE -->
-        <div class="d-block d-md-block d-lg-none mt-3"></div>
+        <div class="d-block d-md-none mt-3"></div>
         <div class="card">
           <div class="card-body">
             <hr />
