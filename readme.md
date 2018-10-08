@@ -1,5 +1,5 @@
 <h1>Bootstrap Resume</h1>
-https://img.shields.io/badge/build-passing-green.svg?longCache=true&style=for-the-badge https://img.shields.io/badge/Laravel-5.7-red.svg?longCache=true&style=for-the-badge https://img.shields.io/badge/License-MIT-blue.svg?longCache=true&style=for-the-badge
+<img src="https://img.shields.io/badge/build-passing-green.svg?longCache=true&style=for-the-badge""> <img src="https://img.shields.io/badge/Laravel-5.7-red.svg?longCache=true&style=for-the-badge""> <img src="https://img.shields.io/badge/License-MIT-blue.svg?longCache=true&style=for-the-badge">
 <h3>Initially I designed this site for myself to show to prospective recruiters and employers. The app has since evolved into a nice proof of concept of a simple Laravel app that I can show off. I have a few plans for the next version of this site but it is building and ready for widespread use now. This site can be customized to show your own work experience and is free for use to anyone who may want a copy. I only ask you replace my information with yours until version 2 comes out.</h3>
 <h3>Are you and employer or recruiter? Are you interested or impressed by this project? You should reach out to me using the site or to my email at info@tylerradlick.com</h3>
 <h3>Designed With Love By: Tyler Radlick</h3>
