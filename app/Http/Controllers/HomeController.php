@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Home;
 use App\Mail\ContactForm;
+use App\Http\Requests\ContactFormSubmission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Response;
 
 class HomeController extends Controller
 {
@@ -24,15 +26,23 @@ class HomeController extends Controller
   *
   * @return \Illuminate\Http\Response
   */
-  public function sendMail(Request $request)
+  public function sendMail(ContactFormSubmission $request)
   {
-    $contact = $request;
-    return new \App\Mail\ContactForm($contact);
+    // Grab only validated data
+    $contact = $request->validated();
 
+    // Send thank you response to requestor
+    Mail::to($contact['emailAddress'])
+    ->send(new ContactForm($contact));
+
+    // Send lead to resume owner
     // Mail::to($request->emailAddress)
-    // ->bcc('tylerradlick@gmail.com')
     // ->send(new ContactForm($contact));
-    //
-    // return redirect()->route('home.index');
+
+    // Return with success toast to notify user the email was sent
+    toast('Thank You. Your message has been.','success','top-right');
+
+    // Redirect back to the index as the request is finished
+    return redirect()->route('home.index');
   }
 }

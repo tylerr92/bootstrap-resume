@@ -10478,38 +10478,6 @@ body {
 * Custom CSS and SCSS
 */
 
-@media (min-width: 576px) {
-  /* change this, by default 540px */
-
-  .container {
-    max-width: 530px;
-  }
-}
-
-@media (min-width: 800px) {
-  /* change this, by default 720px */
-
-  .container {
-    max-width: 799px;
-  }
-}
-
-@media (min-width: 992px) {
-  /* change this, by default 960px */
-
-  .container {
-    max-width: 990px;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* change this, by default 1140px */
-
-  .container {
-    max-width: 1140px;
-  }
-}
-
 .glass {
   position: fixed;
   top: 0;

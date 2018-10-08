@@ -17,8 +17,9 @@
           <!--Table body-->
           <tbody>
             <tr>
-              <td class="align-middle d-md-none d-lg-block">
-                <i class="fas fa-map-marker-alt fa-2x align-middle"></i>
+              <td align="center" class="d-md-none d-lg-block align-middle">
+                <br />
+                <i class="fas fa-map-marker-alt fa-2x"></i>
               </td>
               <td class="align-middle">
                 <p class="card-text">
@@ -32,7 +33,7 @@
             </tr>
 
             <tr>
-              <td class="align-middle d-md-none d-lg-block">
+              <td align="center" class="align-middle d-md-none d-lg-block">
                 <i class="fas fa-mobile fa-2x"></i>
               </td>
               <td class="align-middle">
@@ -43,7 +44,7 @@
             </tr>
 
             <tr>
-              <td class="align-middle d-md-none d-lg-block">
+              <td align="center" class="align-middle d-md-none d-lg-block">
                 <i class="fas fa-envelope fa-2x"></i>
               </td>
               <td class="align-middle">
@@ -54,7 +55,7 @@
             </tr>
 
             <tr>
-              <td class="align-middle d-md-none d-lg-block">
+              <td align="center" class="align-middle d-md-none d-lg-block">
                 <i class="fab fa-linkedin-in fa-2x"></i>
               </td>
               <td class="align-middle">
@@ -65,7 +66,7 @@
             </tr>
 
             <tr>
-              <td class="align-middle d-md-none d-lg-block">
+              <td align="center" class="align-middle d-md-none d-lg-block">
                 <i class="fas fa-globe fa-2x"></i>
               </td>
               <td class="align-middle">
@@ -126,11 +127,13 @@
           <br />
           Atom
           <br />
-          Windows and macOS
+          Linux, macOS, Windows
           <br />
           Technical Documentation
           <br />
           MDM Administration
+          <br />
+          Linux Server Administration
         </p>
       </div>
     </div>
@@ -216,7 +219,7 @@
                   <div class="card-body">
                     <h6>Maurice Villegaus</h6>
                     <h6 class="text-muted">Senior Specialist | Apple Inc.</h6>
-                    <p class="card-text">P: (862) 571-5011‬<br>E: applemv2@me.com</p>
+                    <p class="card-text">P: (862) 571-5011‬<br />E: applemv2@me.com</p>
                   </div>
                 </div>
               </div>
@@ -286,71 +289,200 @@
 <div class="modal fade bd-example-modal-lg mt-4" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
+
       <div class="modal-header">
         <h5 class="modal-title" id="contactModalLabel">Let's Meet! Get in touch today.</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+
       <div class="modal-body">
-        <form method="post" action="{{ route('home.sendMail') }}">
+
+        <form class="needs-validation" novalidate id="contactForm" method="post" action="{{ route('home.sendMail') }}">
+          <!-- Include CSRF Protection -->
           @csrf
+
+          <!-- Name Input Field -->
           <div class="form-group">
             <label for="contactNameLabel">Your Name</label>
-            <input type="text" class="form-control" id="contactName" name="contactName" aria-describedby="contactNameLabel" placeholder="First & Last Name">
+            <input type="text" class="form-control {{ $errors->has('contactName') ? 'is-invalid' : '' }}" id="contactName" name="contactName" aria-describedby="contactNameLabel" placeholder="First & Last Name" value="{{ old('contactName') }}" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              @if ($errors->has('contactName'))
+              {{ $errors->first('contactName') }}
+              @else
+              Name is a required field.
+              @endif
+            </div>
           </div>
 
+          <!-- Company Name Input Field -->
           <div class="form-group">
             <label for="companyNameLabel">Your Companys Name</label>
-            <input type="text" class="form-control" id="companyName" name="companyName" aria-describedby="companyNameLabel" placeholder="Company Name">
+            <input type="text" class="form-control {{ $errors->has('companyName') ? 'is-invalid' : '' }}" id="companyName" name="companyName" aria-describedby="companyNameLabel" placeholder="Company Name" value="{{ old('companyName') }}" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              @if ($errors->has('companyName'))
+              {{ $errors->first('companyName') }}
+              @else
+              echo 'Comapny Name is a required field.'
+              @endif
+            </div>
           </div>
 
+          <!-- Phone Number Input Field -->
           <div class="form-group">
             <label for="phoneNumberLabel">Phone Number</label>
-            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" aria-describedby="phoneNumberLabel" placeholder="(800) 555-5555">
+            <input type="text" class="form-control {{ $errors->has('phoneNumber') ? 'is-invalid' : '' }}" id="phoneNumber" name="phoneNumber" aria-describedby="phoneNumberLabel" placeholder="(800) 555-5555" value="{{ old('phoneNumber') }}" required pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              @if ($errors->has('phoneNumber'))
+              {{ $errors->first('phoneNumber') }}
+              @else
+              Phone Number is a required field and should matach pattern (800) 555-5555
+              @endif
+            </div>
           </div>
 
+          <!-- Email Address Input Field -->
           <div class="form-group">
             <label for="emailAddressLabel">Your Email Address</label>
-            <input type="email" class="form-control" id="emailAddress" name="emailAddress" aria-describedby="emailAddressLabel" placeholder="you@thenextbigthing.com">
+            <input type="email" class="form-control {{ $errors->has('emailAddress') ? 'is-invalid' : '' }}" id="emailAddress" name="emailAddress" aria-describedby="emailAddressLabel" placeholder="you@thenextbigthing.com" value="{{ old('emailAddress') }}" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              @if ($errors->has('emailAddress'))
+              {{ $errors->first('emailAddress') }}
+              @else
+              Email is a required field and must be a valid email address.
+              @endif
+            </div>
           </div>
 
+          <!-- Message Textarea -->
           <div class="form-group">
             <label for="messageLabel">What should we discuss?</label>
-            <textarea class="form-control" id="message" name="message" rows="6"></textarea>
+            <textarea class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}" id="message" name="message" rows="6" required>{{ old('message') }}</textarea>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              @if ($errors->has('message'))
+              {{ $errors->first('message') }}
+              @else
+              A message is required.
+              @endif
+            </div>
           </div>
 
+          <!-- DateTime Picker Field -->
           <div class="form-group">
             <label for="Date and Time">When should we chat?</label>
-            <input type="text" class="form-control datetimepicker-input" id="dateTimePicker" name="dateTimePicker" data-toggle="datetimepicker" data-target="#dateTimePicker"/>
+            <input type="text" class="form-control {{ $errors->has('dateTimePicker') ? 'is-invalid' : '' }} datetimepicker-input" id="dateTimePicker" name="dateTimePicker" data-toggle="datetimepicker" data-target="#dateTimePicker" value="{{ old('dateTimePicker') }}" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              @if ($errors->has('dateTimePicker'))
+              {{ $errors->first('dateTimePicker') }}
+              @else
+              Please click to choose a date and time.
+              @endif
+            </div>
           </div>
 
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
             <button type="submit" class="btn btn-primary">Send</button>
           </div>
-        </div>
+        </form>
+
       </div>
+
     </div>
+  </div>
+</div>
 
-    @endsection
+@endsection
 
-    @push('after-scripts')
-    <!-- Bootstrap Modal -->
-    <script>
-    $('#contactModal').on('shown.bs.modal', function () {
-      $('#myInput').trigger('focus')
-    })
-    </script>
+@push('after-scripts')
+<!-- Bootstrap Modal -->
+<script>
+$('#contactModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
 
-    <!-- Datetime Picker -->
-    <script type="text/javascript">
-    $(function () {
-      $('#dateTimePicker').datetimepicker(
-        {
-          sideBySide: true
+<!-- Bootstrap Form Validation -->
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
         }
-      );
+        form.classList.add('was-validated');
+      }, false);
     });
-    </script>
-    @endpush
+  }, false);
+})();
+
+// Contact Name Remove Class Error
+$( "#contactName" ).keydown(function() {
+  $('#contactName').removeClass("is-invalid");
+});
+
+// Company Name Remove Class Error
+$( "#companyName" ).keydown(function() {
+  $('#companyName').removeClass("is-invalid");
+});
+
+// Phone Number Remove Class Error
+$( "#phoneNumber" ).keydown(function() {
+  $('#phoneNumber').removeClass("is-invalid");
+});
+
+// Email Address Remove Class Error
+$( "#emailAddress" ).keydown(function() {
+  $('#emailAddress').removeClass("is-invalid");
+});
+
+// Message Remove Class Error
+$( "#message" ).keydown(function() {
+  $('#message').removeClass("is-invalid");
+});
+
+// DateTime Picker Remove Class Error
+$( "#dateTimePicker" ).keydown(function() {
+  $('#dateTimePicker').removeClass("is-invalid");
+});
+</script>
+
+<!-- Datetime Picker -->
+<script type="text/javascript">
+$(function () {
+  $('#dateTimePicker').datetimepicker(
+    {
+      sideBySide: true,
+      defaultDate: '{{ Carbon\Carbon::now(new DateTimeZone('America/Chicago'))->addday(1) }}',
+      stepping: [15]
+    }
+  );
+});
+</script>
+@endpush

@@ -12,16 +12,16 @@
       </div>
       <div class="card-body">
         <p class="card-text">
-          Hello {{ $contact->contactName }},<br>
-          <br>
-          Thank you for checking out my resume website. I hope you enjoyed it as much as I enjoyed making it. Based on what you let me know, you want to chat about an opportunity with {{ $contact->companyName }} on {{ Carbon\Carbon::parse($contact->dateTimePicker)->format('m/d/Y') }} at {{ Carbon\Carbon::parse($contact->dateTimePicker)->format('h:m A') }}. I will follow up via email to {{ $contact->emailAddress }} by {{ Carbon\Carbon::parse($contact->dateTimePicker)->format('m/d/Y') }} to confirm the details. Otherwise I will give you a call at {{ $contact->phoneNumber }} to discuss, <br><br>
-          {{ $contact->message }}<br><br>
-          If any of that changes, just let me know by replying to this email or sending me a new email to tylerradlick@gmail.com. I look forward to discussing our next big project together soon.<br>
-          <br>
-          Regards,<br>
-          <br>
-          Tyler J. Radlick<br>
-          (586) 822-3120<br>
+          Hello {{ $contact['contactName'] }},<br />
+          <br />
+          Thank you for checking out my resume website. I hope you enjoyed it as much as I enjoyed making it. Based on what you let me know, you want to chat about an opportunity with {{ $contact['companyName'] }} on {{ Carbon\Carbon::parse($contact['dateTimePicker'])->format('m/d/Y') }} at {{ Carbon\Carbon::parse($contact['dateTimePicker'])->format('h:i A') }}. I will follow up via email to {{ $contact['emailAddress'] }} by {{ Carbon\Carbon::parse($contact['dateTimePicker'])->subDay(1)->format('m/d/Y') }} to confirm the details. Otherwise I will give you a call at {{ $contact['phoneNumber'] }} to discuss, <br /><br />
+          {{ $contact['message'] }}<br /><br />
+          If any of that changes, let me know by replying to this email or sending me a new email to tylerradlick@gmail.com. I look forward to collaborating our next big project together soon.<br />
+          <br />
+          Regards,<br />
+          <br />
+          Tyler J. Radlick<br />
+          (586) 822-3120<br />
           tylerradlick@gmail.com
         </p>
       </div>
