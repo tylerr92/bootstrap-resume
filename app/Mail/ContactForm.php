@@ -29,6 +29,7 @@ class ContactForm extends Mailable
   public function build()
   {
     return $this
+    ->from('info@tylerradlick.com', 'Information @ tylerradlick.com')
     ->subject('Request For Meeting with Tyler J. Radlick')
     ->view('emails.contact')
     ->with([
