@@ -33,9 +33,12 @@ class HomeController extends Controller
 
         // Send thank you response to requestor
         Mail::to($contact['emailAddress'])
-        ->bcc('tylerradlick@gmail.com')
         ->send(new ContactForm($contact));
-        
+
+        // Send thank you response to requestor
+        Mail::to('tylerradlick@gmail.com')
+        ->send(new ContactForm($contact));
+
         // Send lead to resume owner
         // Mail::to($request->emailAddress)
         // ->send(new ContactForm($contact));
