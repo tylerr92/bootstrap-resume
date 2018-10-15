@@ -9,7 +9,7 @@
 </head>
 <body class="bg-light">
   <div class="container">
-    <main class="mx-5 mt-4">
+    <main class="mt-4">
       @yield('content')
     </main>
   </div>

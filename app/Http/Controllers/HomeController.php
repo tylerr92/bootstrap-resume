@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Home;
 use App\Mail\ContactForm;
+use App\Mail\Lead;
 use App\Http\Requests\ContactFormSubmission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -35,13 +36,9 @@ class HomeController extends Controller
         Mail::to($contact['emailAddress'])
         ->send(new ContactForm($contact));
 
-        // Send thank you response to requestor
-        Mail::to('tylerradlick@gmail.com')
-        ->send(new ContactForm($contact));
-
         // Send lead to resume owner
-        // Mail::to($request->emailAddress)
-        // ->send(new ContactForm($contact));
+        Mail::to('tylerradlick@gmail.com')
+        ->send(new Lead($contact));
 
         // Return with success toast to notify user the email was sent
         toast('Thank You. Your message has been.','success','top-right');
